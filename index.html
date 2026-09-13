@@ -35,7 +35,23 @@ footer{text-align:center;padding:36px;color:#5b667e;font-size:12px;border-top:1p
 <div class="card ld"><div class="top"><img class="av" src="fond.jpg" style="object-position:top"><div><b>LeDarkSaja</b><br><span class="role">@LesSuprem • LEADER</span></div></div><div class="desc"><b>Leader LDS :</b> Ton fond officiel avec les 3 persos, YouTube néon, 2 démons bleu/rouge.</div><a href="https://www.youtube.com/@LesSuprem" target="_blank">Voir LesSuprem</a></div>
 </div></div>
 <div style="text-align:center;padding:20px 0 10px;font-family:Orbitron,Arial;font-size:12px;letter-spacing:2px;color:#a855f7">
+ <div style="text-align:center; margin:20px 0;">
+  <p style="font-family:Orbitron; font-size:11px; letter-spacing:2px; color:#a855f7;">🎵 Y QUE FUE - DON MIGUELO</p>
+  <iframe width="300" height="170" 
+  src="https://www.youtube.com/embed/Ir1K1zRr3p0?rel=0" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen
+  style="border-radius:12px; border:2px solid #a855f7; box-shadow:0 0 20px #a855f7;">
+  </iframe>
+<div style="text-align:center;padding:15px 0 10px;font-family:Orbitron,Arial;font-size:12px;letter-spacing:2px;color:#a855f7">
   👁️ VISITES : <span id="visits" style="color:#fff;font-size:18px;font-weight:900">...</span>
 </div>
 
-<script> fetch('https://abacus.jasoncameron.dev/hit/ladarksquad-ytb-officiel/visites-final') .then(r => r.json()) .then(d => { document.getElementById('visits').innerText = d.value || d.count || d.data; }); </script> </body></html>
+<script>
+function cb(r){
+  document.getElementById('visits').innerText = r.value;
+}
+</script>
+<script async src="https://abacus.jasoncameron.dev/hit/ladarksquad-ytb-officiel/visites-finale-v3?callback=cb"></script>
+</body></html>
