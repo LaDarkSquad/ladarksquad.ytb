@@ -38,11 +38,4 @@ footer{text-align:center;padding:36px;color:#5b667e;font-size:12px;border-top:1p
   👁️ VISITES : <span id="visits" style="color:#fff;font-size:18px;font-weight:900">...</span>
 </div>
 
-<script>
-fetch('https://api.counterapi.dev/v1/ladarksquad-ytb-officiel/visites/up')
-  .then(r => r.json())
-  .then(d => {
-    document.getElementById('visits').innerText = d.count;
-  });
-</script>
-</body></html>
+<script> fetch('https://abacus.jasoncameron.dev/hit/ladarksquad-ytb-officiel/visites-final') .then(r => r.json()) .then(d => { document.getElementById('visits').innerText = d.value || d.count || d.data; }); </script> </body></html>
