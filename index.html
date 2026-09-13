@@ -35,23 +35,14 @@ footer{text-align:center;padding:36px;color:#5b667e;font-size:12px;border-top:1p
 <div class="card ld"><div class="top"><img class="av" src="fond.jpg" style="object-position:top"><div><b>LeDarkSaja</b><br><span class="role">@LesSuprem • LEADER</span></div></div><div class="desc"><b>Leader LDS :</b> Ton fond officiel avec les 3 persos, YouTube néon, 2 démons bleu/rouge.</div><a href="https://www.youtube.com/@LesSuprem" target="_blank">Voir LesSuprem</a></div>
 </div></div>
 <div style="text-align:center;padding:20px 0 10px;font-family:Orbitron,Arial;font-size:12px;letter-spacing:2px;color:#a855f7">
-  👁️ VISITEURS : <span id="visits" style="color:#fff;font-size:18px;font-weight:900">...</span>
+  👁️ VISITES : <span id="visits" style="color:#fff;font-size:18px;font-weight:900">...</span>
 </div>
-<footer>© 2026 LaDarkSquad - Lien permanent - https://ladarksquad.github.io/ladarksquad.ytb/</footer>
 
 <script>
-// Compteur de visiteurs permanent pour LaDarkSquad
-fetch('https://api.countapi.xyz/hit/ladarksquad-ytb-officiel/visits')
-  .then(r => r.json())
-  .then(d => {
-    document.getElementById('visits').innerText = d.value;
-  })
-  .catch(() => {
-    // Si l'API bug, on affiche un compteur local
-    let c = localStorage.getItem('lds_visits') || 128;
-    c = parseInt(c) + 1;
-    localStorage.setItem('lds_visits', c);
-    document.getElementById('visits').innerText = c + '+';
+fetch('https://api.countapi.xyz/hit/ladarksquad-final-v2/visits')
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('visits').innerText = data.value;
   });
 </script>
 </body></html>
